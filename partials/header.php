@@ -1,4 +1,5 @@
-  <?php 
+  <?php
+  
    include('partials/config.php'); 
    include 'partials/add_to_cart.php'; 
    $sql = "SELECT * FROM `categories` where status = 1 ORDER BY `category_name` ASC";
@@ -7,7 +8,8 @@
    
   $obj = new add_to_cart();
   $totalProduct = $obj->totalProduct();
-//   $totalProduct = '';
+
+  //echo $totalProduct;
   
    ?>
    <!-- Start Header Style -->

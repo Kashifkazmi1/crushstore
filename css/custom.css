@@ -1,10 +1,139 @@
-/*--------------------------------------------------------------
+/* your styles go here */
 
-  Template Name: Asbab eCommerce HTML5 Template.
-  Description: Asbab is a unique website template designed in HTML with a simple & beautiful look.
+.pageh1{
+      text-align: right;
+  margin-top: 123px;
+  margin-right: 73px;
+  color: white;
+}
 
----------------------------------------------------------------*/
+#modal{
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+}
+#modal-form {
+  background: #fff;
+  width: 58%;
+  position: relative;
+  top: 0%;
+  left: calc(63% - 20%);
+  padding: 16px;
+  border-radius: 4px;
+  overflow: scroll;
+  height: 100%;
+}
+#modal-form h2{
+  margin: 0 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+#modal-form input[type = "text"]{
+  width: 100%;
+}
+#close-btn{
+  background: #c43b68;
+  color: white;
+  width: 26px;
+  height: 26px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  right: 56%!important;
+  cursor: pointer;
+}
 
-/* ----------------------------------------------------
-	You can put your custom css code here: 
--------------------------------------------------------*/
+/* search  */
+#search-modal{
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: none;
+}
+#search-modal-form{
+  background: #fff;
+  width: 98%;
+  position: relative;
+  top: 2%;
+  left: calc(23% - 22%);
+  padding: 13px;
+  border-radius: 144px;
+  height: 76px;
+}
+#search-modal-form h2{
+  margin: 0 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+#search-modal-form input[type = "text"]{
+  width: 75%;
+}
+#search-close-btn{
+  background: #c43b68;
+  color: white;
+  width: 26px;
+  height: 26px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  right: 644px;
+  cursor: pointer;
+}
+
+
+/* login  */
+#login-modal{
+  display: none;
+}
+
+/**** BTN No. 14 ****/
+.btn-14 {
+  
+  z-index: 1;
+}
+.btn-14:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background: #c43b68!important;
+  transition: all 0.3s ease;
+}
+.btn-14:hover {
+  color: #fff;
+}
+.btn-14:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-14:active {
+  top: 2px;
+}
+
+.mean-container .mean-nav {
+  background: #c43b68!important;
+  float: left;
+  margin-top: 0;
+  width: 100%;
+}
+.btn-link{
+  border-radius: 0;
+    text-align: center;
+    padding-top: 12px!important;
+}
