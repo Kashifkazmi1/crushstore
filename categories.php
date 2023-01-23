@@ -56,6 +56,7 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
  
   
   $product = cat_product($conn,'',$id,$sort_order);
+  $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
  
 
 ?>
@@ -98,7 +99,7 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
 
 <body>
    <?php include ("partials/header.php"); ?>
-   <section class=" bg-cover bg-center" style="background: url(img/banners/banner2.jpg); border-radius: 60px;background-size: cover;
+   <section class=" bg-cover bg-center" style="background: url(img/banners/winter.jpg); border-radius: 70px;background-size: cover;
     background-position: center;
     margin: 1%;">
           <div style="height:365px;" class="container">
@@ -164,15 +165,15 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
                                                 </div>
                                                 <div class="fr__hover__info">
                                                     <ul class="product__action">
-                                                        <li><a href="wishlist.php"><i class="icon-heart icons"></i></a></li>
+                                                        <li><a href="javascript:void(0)" onclick="wishlist('<?php echo $list['id']; ?>');"><i class="icon-heart icons"></i></a></li>
 
-                                                        <li><a href="cart.php"><i class="icon-handbag icons"></i></a></li>
+                                                        <li><a href="cart.php" onclick="add_cart('<?php echo $list['id']; ?>','add');"><i class="icon-handbag icons"></i></a></li>
 
                                                         <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="fr__product__inner">
-                                                    <h4><a product-details.php?id=<?php echo $list['id']; ?>&cat=<?php echo $list['category_id']; ?>"><?php echo $list['name']; ?></a></h4>
+                                                    <h4><a href="product-details.php?id=<?php echo $list['id']; ?>&cat=<?php echo $list['category_id']; ?>"><?php echo $list['name']; ?></a></h4>
                                                     <ul class="fr__pro__prize">
                                                         <li class="old__prize">$<?php echo $list['mrp']; ?></li>
                                                         <li>$<?php echo $list['price']; ?></li>
@@ -191,15 +192,22 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
                                         <div class="col-xs-12">
                                             <div class="ht__list__wrap">
                                                 <!-- Start List Product -->
+                                                <?php
+                                        if (count($product) > 0) {
+
+
+                                            foreach ($product as $list) { ?>
                                                 <div class="ht__list__product">
                                                     <div class="ht__list__thumb">
-                                                        <a href="product-details.html"><img src="images/product-2/pro-1/1.jpg" alt="product images"></a>
+                                                        <a href="product-details.php?id=<?php echo $list['id']; ?>&cat=<?php echo $list['category_id']; ?>">
+                                                            <img  src="admin/media/product/<?php echo $list['img']; ?>" alt="product images"></a>
                                                     </div>
-                                                    <div class="htc__list__details">
-                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
+                                                    <div class="htc__list__details" style="width: 154%;">
+                                                        <h2><a href=href="product-details.php?id=<?php echo $list['id']; ?>&cat=<?php echo $list['category_id']; ?>">
+                                                        <?php echo $list['name']; ?> </a></h2>
                                                         <ul  class="pro__prize">
-                                                            <li class="old__prize">$82.5</li>
-                                                            <li>$75.2</li>
+                                                            <li class="old__prize">$<?php echo $list['mrp']; ?></li>
+                                                            <li>$<?php echo $list['price']; ?></li>
                                                         </ul>
                                                         <ul class="rating">
                                                             <li><i class="icon-star icons"></i></li>
@@ -208,88 +216,18 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
                                                             <li class="old"><i class="icon-star icons"></i></li>
                                                             <li class="old"><i class="icon-star icons"></i></li>
                                                         </ul>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqul Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                        <p><?php echo $list['description']; ?></p>
                                                         <div class="fr__list__btn">
-                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
+                                                            <a class="fr__btn" href="cart.php" onclick="add_cart('<?php echo $list['id']; ?>','add');">Add To Cart</a>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                
+                                        <?php }
+                                        } else {
+                                            echo "<h1 style='margin: 121px;'>No Product found</h1>";}?>
                                                 <!-- End List Product -->
-                                                <!-- Start List Product -->
-                                                <div class="ht__list__product">
-                                                    <div class="ht__list__thumb">
-                                                        <a href="product-details.html"><img src="images/product-2/pro-1/2.jpg" alt="product images"></a>
-                                                    </div>
-                                                    <div class="htc__list__details">
-                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
-                                                        <ul  class="pro__prize">
-                                                            <li class="old__prize">$82.5</li>
-                                                            <li>$75.2</li>
-                                                        </ul>
-                                                        <ul class="rating">
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li class="old"><i class="icon-star icons"></i></li>
-                                                            <li class="old"><i class="icon-star icons"></i></li>
-                                                        </ul>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqul Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                        <div class="fr__list__btn">
-                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End List Product -->
-                                                <!-- Start List Product -->
-                                                <div class="ht__list__product">
-                                                    <div class="ht__list__thumb">
-                                                        <a href="product-details.html"><img src="images/product-2/pro-1/3.jpg" alt="product images"></a>
-                                                    </div>
-                                                    <div class="htc__list__details">
-                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
-                                                        <ul  class="pro__prize">
-                                                            <li class="old__prize">$82.5</li>
-                                                            <li>$75.2</li>
-                                                        </ul>
-                                                        <ul class="rating">
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li class="old"><i class="icon-star icons"></i></li>
-                                                            <li class="old"><i class="icon-star icons"></i></li>
-                                                        </ul>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqul Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                        <div class="fr__list__btn">
-                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End List Product -->
-                                                <!-- Start List Product -->
-                                                <div class="ht__list__product">
-                                                    <div class="ht__list__thumb">
-                                                        <a href="product-details.html"><img src="images/product-2/pro-1/4.jpg" alt="product images"></a>
-                                                    </div>
-                                                    <div class="htc__list__details">
-                                                        <h2><a href="product-details.html">Product Title Here </a></h2>
-                                                        <ul  class="pro__prize">
-                                                            <li class="old__prize">$82.5</li>
-                                                            <li>$75.2</li>
-                                                        </ul>
-                                                        <ul class="rating">
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li><i class="icon-star icons"></i></li>
-                                                            <li class="old"><i class="icon-star icons"></i></li>
-                                                            <li class="old"><i class="icon-star icons"></i></li>
-                                                        </ul>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisLorem ipsum dolor sit amet, consec adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqul Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                                        <div class="fr__list__btn">
-                                                            <a class="fr__btn" href="cart.html">Add To Cart</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- End List Product -->
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -301,19 +239,20 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
                     </div>
                     <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 col-sm-12 col-xs-12 smt-40 xmt-40">
                         <div class="htc__product__leftsidebar">
-                            <!-- Start Best Sell Area -->
-                            <div class="htc__recent__product">
+                           <!-- Start Best Sell Area -->
+                           <div class="htc__recent__product">
                                 <h2 class="title__line--4">best seller</h2>
                                 <div class="htc__recent__product__inner">
-                                    <!-- Start Single Product -->
+
+                                   <?php while ($bs = mysqli_fetch_assoc($best_saler)) { ?>
                                     <div class="htc__best__product">
                                         <div class="htc__best__pro__thumb">
-                                            <a href="product-details.html">
-                                                <img src="images/product-2/sm-smg/1.jpg" alt="small product">
+                                            <a href="product-details.php?id=<?php echo $bs['id']; ?>&cat=<?php echo $bs['category_id']; ?>">
+                                                <img src="admin/media/product/<?php echo $bs['img']; ?>" alt="small product">
                                             </a>
                                         </div>
                                         <div class="htc__best__product__details">
-                                            <h2><a href="product-details.html">Product Title Here</a></h2>
+                                            <h2><a href="product-details.php?id=<?php echo $bs['id']; ?>&cat=<?php echo $bs['category_id']; ?>"><?php echo ($bs['name']); ?></a></h2>
                                             <ul class="rating">
                                                 <li><i class="icon-star icons"></i></li>
                                                 <li><i class="icon-star icons"></i></li>
@@ -322,58 +261,12 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
                                                 <li class="old"><i class="icon-star icons"></i></li>
                                             </ul>
                                             <ul  class="pro__prize">
-                                                <li class="old__prize">$82.5</li>
-                                                <li>$75.2</li>
+                                                <li class="old__prize">$<?php echo ($bs['mrp']); ?></li>
+                                                <li>$<?php echo ($bs['price']); ?></li>
                                             </ul>
                                         </div>
                                     </div>
-                                    <!-- End Single Product -->
-                                    <!-- Start Single Product -->
-                                    <div class="htc__best__product">
-                                        <div class="htc__best__pro__thumb">
-                                            <a href="product-details.html">
-                                                <img src="images/product-2/sm-smg/2.jpg" alt="small product">
-                                            </a>
-                                        </div>
-                                        <div class="htc__best__product__details">
-                                            <h2><a href="product-details.html">Product Title Here</a></h2>
-                                            <ul class="rating">
-                                                <li><i class="icon-star icons"></i></li>
-                                                <li><i class="icon-star icons"></i></li>
-                                                <li><i class="icon-star icons"></i></li>
-                                                <li class="old"><i class="icon-star icons"></i></li>
-                                                <li class="old"><i class="icon-star icons"></i></li>
-                                            </ul>
-                                            <ul  class="pro__prize">
-                                                <li class="old__prize">$82.5</li>
-                                                <li>$75.2</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Product -->
-                                    <!-- Start Single Product -->
-                                    <div class="htc__best__product">
-                                        <div class="htc__best__pro__thumb">
-                                            <a href="product-details.html">
-                                                <img src="images/product-2/sm-smg/1.jpg" alt="small product">
-                                            </a>
-                                        </div>
-                                        <div class="htc__best__product__details">
-                                            <h2><a href="product-details.html">Product Title Here</a></h2>
-                                            <ul class="rating">
-                                                <li><i class="icon-star icons"></i></li>
-                                                <li><i class="icon-star icons"></i></li>
-                                                <li><i class="icon-star icons"></i></li>
-                                                <li class="old"><i class="icon-star icons"></i></li>
-                                                <li class="old"><i class="icon-star icons"></i></li>
-                                            </ul>
-                                            <ul  class="pro__prize">
-                                                <li class="old__prize">$82.5</li>
-                                                <li>$75.2</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!-- End Single Product -->
+                                   <?php } ?>
                                 </div>
                             </div>
                             <!-- End Best Sell Area -->

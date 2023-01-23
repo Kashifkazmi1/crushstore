@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 class add_to_cart{
 
     function addProduct($pid,$qty){

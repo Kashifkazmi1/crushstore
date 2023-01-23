@@ -56,7 +56,8 @@ include 'partials/config.php';
      <?php include('partials/header.php'); ?>
 
      <?php while ($list = mysqli_fetch_assoc($res)) { ?>
-        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(img/banners/slider_1.jpg) no-repeat scroll center top / cover ;">
+        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(img/banners/slider_1.jpg) no-repeat scroll center top / cover ;    border-radius: 70px;
+">
             <div class="ht__bradcaump__wrap">
                 <div class="container">
                     <div class="row ">
@@ -200,7 +201,7 @@ include 'partials/config.php';
                                 </div>
                                 <div class="fr__hover__info">
                                     <ul class="product__action">
-                                        <li><a href="wishlist.php"><i class="icon-heart icons"></i></a></li>
+                                        <li><a href="javascript:void(0)" onclick="wishlist('<?php echo $list['id']; ?>');"><i class="icon-heart icons"></i></a></li>
 
                                         <li><a  href="cart.php" onclick="add_cart('<?php echo $list['id']; ?>','add');"><i class="icon-handbag icons"></i></a></li>
 

@@ -44,16 +44,17 @@ include("modules/signup.php");
 
        
         <!-- Start Bradcaump area -->
-        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/4.jpg) no-repeat scroll center center / cover ;">
+        <div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(img/banners/banner3.jpg) no-repeat scroll center center / cover ;    border-radius: 70px;
+">
             <div class="ht__bradcaump__wrap">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="bradcaump__inner">
-                                <nav class="bradcaump-inner">
-                                  <a class="breadcrumb-item" href="index.html">Home</a>
+                                <nav style="    margin-left: 51%;" class="bradcaump-inner">
+                                  <a style="color:white ;" class="breadcrumb-item" href="index.php">Home</a>
                                   <span class="brd-separetor"><i class="zmdi zmdi-chevron-right"></i></span>
-                                  <span class="breadcrumb-item active">Login</span>
+                                  <span style="color:white ;" class="breadcrumb-item active">Login</span>
                                 </nav>
                             </div>
                         </div>
@@ -67,7 +68,7 @@ include("modules/signup.php");
             <div class="container">
                 <div class="row">
 					<div class="col-md-6">
-                    <img id="signupimg"  style="margin-top: 35%;" src="img/signup.JPG"
+                    <img id="signupimg"  style="margin-top:0%;" src="img/banners/login.jpg"
                   class="img-fluid" alt=" image">
 						<div style="display:none ;" id="login" class="contact-form-wrap mt--60">
 							<div class="col-xs-12">
@@ -103,7 +104,7 @@ include("modules/signup.php");
 				
                 
 					<div  id="loginimg" style="display:none ;" class="col-md-6">
-                    <img  style="margin-top:20%;" src="img/signup.JPG"
+                    <img  style="margin-top:0%;" src="img/banners/login.jpg"
                   class="img-fluid" alt=" image">
                   </div>
                   <div id="login" class="col-md-6">

@@ -58,62 +58,108 @@ include 'modules/signin.php';
     <?php  require_once ('partials/header.php'); ?>
 
 
-        <!-- Start Slider Area -->
+        
         <div 
          class="slider__container slider--one bg__cat--3">
-            <div class="slide__container slider__activation__wrap owl-carousel">
-                <!-- Start Single Slide -->
-                <div  class="single__slide animation__style01 slider__fixed--height">
+            <div class="slide__container slider__activation__wrap owl-carousel" >
+                
+               
+                <div class="single__slide animation__style01 slider__fixed--height"
+                style="background: url(img/banners/winter2.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                >
                     <div class="container">
                         <div class="row align-items__center">
                             <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                                 <div class="slide">
                                     <div class="slider__inner">
-                                        <h2>collection 2018</h2>
-                                        <h1>NICE CHAIR</h1>
+                                        <h2 style="color:white ;">collection 2023</h2>
+                                        <h1 style="color:white ;">WINTER SPACIALS</h1>
                                         <div class="cr__btn">
-                                            <a href="cart.html">Shop Now</a>
+                                            <a href="shop.php">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
+                                <div class="slide__thumb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="single__slide animation__style01 slider__fixed--height"
+                style="background: url(img/banners/banner2.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                >
+                    <div class="container">
+                        <div class="row align-items__center">
+                            <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
+                                <div class="slide">
+                                    <div class="slider__inner">
+                                        <h2>collection 2023</h2>
+                                        <h1>NICE CLOTHES</h1>
+                                        <div class="cr__btn">
+                                            <a href="shop.php">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
+                                <div class="slide__thumb"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div  class="single__slide animation__style01 slider__fixed--height"
+                style="background: url(img/banners/banner1.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                >
+                    <div class="container">
+                        <div class="row align-items__center">
+                            <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
+                                <div class="slide">
+                                    <div class="slider__inner">
+                                        <h2>collection 2023</h2>
+                                        <h1>NICE WATCHES</h1>
+                                        <div class="cr__btn">
+                                            <a href="shop.php">Shop Now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
                                 <div class="slide__thumb">
-                                    <img src="img\banners\banner1.jpg" alt="slider images">
+                                   
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- End Single Slide -->
-                <!-- Start Single Slide -->
-                <div class="single__slide animation__style01 slider__fixed--height">
+               
+                <div class="single__slide animation__style01 slider__fixed--height"
+                style="background: url(img/banners/banner5.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                >
                     <div class="container">
                         <div class="row align-items__center">
                             <div class="col-md-7 col-sm-7 col-xs-12 col-lg-6">
                                 <div class="slide">
                                     <div class="slider__inner">
-                                        <h2>collection 2018</h2>
-                                        <h1>NICE CHAIR</h1>
+                                        <h2>Get 30% Discount</h2>
+                                        <h1>RESGISTER NOW</h1>
                                         <div class="cr__btn">
-                                            <a href="cart.html">Shop Now</a>
+                                            <a href="login.php">Sigup</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-5 col-xs-12 col-md-5">
-                                <div class="slide__thumb">
-                                <img src="img\banners\banner3.jpg" alt="slider images">
-
-                                </div>
+                                <div class="slide__thumb"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- End Single Slide -->
+               
             </div>
-        </div>
-        <!-- Start Slider Area -->
+        </div> 
+      
         <!-- Start Category Area -->
         <section class="htc__category__area ptb--100">
             <div class="container">
@@ -146,7 +192,7 @@ include 'modules/signin.php';
                                     </div>
                                     <div class="fr__hover__info">
                                         <ul class="product__action">
-                                            <li><a href="wishlist.html"><i class="icon-heart icons"></i></a></li>
+                                            <li><a href="javascript:void(0)" onclick="wishlist('<?php echo $list['id']; ?>');"><i class="icon-heart icons"></i></a></li>
 
                                             <li><a href="javascript:void(0)" onclick="add_cart('<?php echo $list['id']; ?>','add');"><i class="icon-handbag icons"></i></a></li>
 
@@ -193,11 +239,11 @@ include 'modules/signin.php';
                                 </div>
                                 <div class="fr__hover__info">
                                     <ul class="product__action">
-                                        <li><a href="wishlist.html"><i class="icon-heart icons"></i></a></li>
+                                        <li><a href="javascript:void(0)" onclick="wishlist('<?php echo $list['id']; ?>');"><i class="icon-heart icons"></i></a></li>
 
                                         <li><a href="javascript:void(0)" onclick="add_cart('<?php echo $list['id']; ?>','add');"><i class="icon-handbag icons"></i></a></li>
 
-                                        <li><a href="#"><i class="icon-shuffle icons"></i></a></li>
+                                        <li><a href="#" ><i class="icon-shuffle icons"></i></a></li>
                                     </ul>
                                 </div>
                                 <div class="fr__product__inner">
@@ -229,9 +275,29 @@ include 'modules/signin.php';
      ?>
  
     </div>
-    <!-- Body main wrapper end -->
-
-    <!-- Placed js at the end of the document so the pages load faster -->
+    <script>
+     var currentIndex = 0 ;
+     var slides = $(".carousel .slide");
+     var slideCount = slides.length;
+     function showSlide(index)
+     {
+         slides.hide();
+         slides.eq(index).show();
+     }
+     function nextSlide()
+     {
+         currentIndex ++ ;
+         if(currentIndex >= slideCount)
+         {
+             currentIndex = 0;
+         }
+         showSlide(currentIndex);
+     }
+     $(document).ready(function(){
+         showSlide(currentIndex);
+         setInterval(nextSlide(),3000);
+     });
+ </script>
 
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-3.2.1.min.js"></script>

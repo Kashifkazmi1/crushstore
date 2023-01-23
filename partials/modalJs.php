@@ -1,7 +1,7 @@
 
   <script>
 
-delete product modal
+//delete product modal
 
 function manage_cart(pid,type){
 
@@ -11,6 +11,7 @@ $.ajax({
           data:'pid='+pid+'&type='+type,
           success:function(result){ 
            $("#remove").fadeOut();
+           window.location.reload();
           }
       });
 }

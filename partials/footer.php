@@ -1,7 +1,7 @@
    <!-- Start Footer Area -->
    <footer id="htc__footer">
             <!-- Start Footer Widget -->
-            <div class="footer__container bg__cat--1">
+            <div  style=" background: #003;"  class="footer__container bg__cat--1">
                 <div class="container">
                     <div class="row">
                         <!-- Start Single Footer Widget -->
@@ -50,10 +50,10 @@
                                 <div class="ft__inner">
                                     <ul class="ft__list">
                                         <li><a href="#">My Account</a></li>
-                                        <li><a href="cart.html">My Cart</a></li>
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="cart.php">My Cart</a></li>
+                                        <li><a href="login.php">Login</a></li>
+                                        <li><a href="wishlist.php">Wishlist</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -66,10 +66,10 @@
                                 <div class="ft__inner">
                                     <ul class="ft__list">
                                         <li><a href="#">My Account</a></li>
-                                        <li><a href="cart.html">My Cart</a></li>
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="cart.php">My Cart</a></li>
+                                        <li><a href="login.php">Login</a></li>
+                                        <li><a href="wishlist.php">Wishlist</a></li>
+                                        <li><a href="checkout.php">Checkout</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -81,7 +81,7 @@
                                 <h2 class="title__line--2">NEWSLETTER </h2>
                                 <div class="ft__inner">
                                     <div class="news__input">
-                                        <input type="text" placeholder="Your Mail*">
+                                        <input style="border-color:white ; color: white;" type="text" placeholder="Your Mail*">
                                         <div class="send__btn">
                                             <a class="fr__btn" href="#">Send Mail</a>
                                         </div>
@@ -96,12 +96,12 @@
             </div>
             <!-- End Footer Widget -->
             <!-- Start Copyright Area -->
-            <div class="htc__copyright bg__cat--5">
+            <div style="background: #004;"  class="htc__copyright bg__cat--5">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="copyright__inner">
-                                <p>Copyright© <a href="https://freethemescloud.com/">Free themes Cloud</a> 2018. All right reserved.</p>
+                                <p>Copyright© <a  href="#">Develop by <b>Kashif</b></a> 2023. All right reserved.</p>
                                 <a href="#"><img src="images/others/shape/paypol.png" alt="payment images"></a>
                             </div>
                         </div>

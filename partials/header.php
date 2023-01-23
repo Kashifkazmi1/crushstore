@@ -51,14 +51,12 @@
                                             
                                         <li class="drop"><a href="#">Pages</a>
                                             <ul class="dropdown">
+                                            <li><a href="wishlist.php">wishlist</a></li>
+                                            <li><a href="order_detail.php">Oder Details</a></li>
+
                                                 <li><a href="blog.php">Blog</a></li>
-                                                <li><a href="blog-details.php">Blog Details</a></li>
                                                 <li><a href="cart.php">Cart page</a></li>
-                                                <li><a href="checkout.php">checkout</a></li>
-                                                <li><a href="contact.php">contact</a></li>
-                                                <li><a href="product-grid.php">product grid</a></li>
-                                                <li><a href="product-details.php">product details</a></li>
-                                                <li><a href="wishlist.php">wishlist</a></li>
+                                                <li><a href="contact.php">contact us</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="contact.php">contact</a></li>

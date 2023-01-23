@@ -375,10 +375,12 @@ div.style-customizer .skin-teal {
 
 .boxed-layout.home-2 .owl-carousel-8 .owl-nav .owl-prev {
     left: 50%;
+    padding-top:17px!important;
 }
 
 .boxed-layout.home-2 .owl-carousel-8 .owl-nav .owl-next {
     right: 50%;
+    padding-top:17px!important;
 }
 
 .boxed-layout.home-2 .owl-carousel-8 .owl-controls {

@@ -6,7 +6,8 @@ $price_high = "";
 $price_low = "";
 $new = "";
 $old = "";
-
+$str = mysqli_real_escape_string($conn, $_GET['str']);
+if ($str != '') {
 if(isset($_GET['sort'])){
   $sort = mysqli_real_escape_string($conn,$_GET['sort']);
   if ($sort=="price_high") {
@@ -23,14 +24,10 @@ if(isset($_GET['sort'])){
     $old = "selected";
   }
 }
-// function product
-function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
+
    
-  $sql ="SELECT * FROM `product` where status = 1 ";
-  if ($cat_id!='') {
-      $sql.=" and category_id = $cat_id ";
-  
-  }
+$sql = "SELECT * FROM `product` WHERE name LIKE '%$str%' or description LIKE '%$str%'";
+ 
   if ($sort_order!='') {
     $sql.= " ".$sort_order;
 }else{
@@ -38,24 +35,14 @@ function cat_product($conn,$limit='',$cat_id='',$sort_order = ''){
 
 }
 
-  if ($limit!='') {
-      $sql.="limit  $limit";
   }
   $res=mysqli_query($conn,$sql);
   $data = array();
   while ($row = mysqli_fetch_assoc($res)) {
       $data[]=$row;
   }
- return $data;
-}
+  $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
  
-
-  
-  $product = cat_product($conn,'','',$sort_order);
-
-$best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
- 
-
 ?>
 
 <!doctype html>
@@ -63,7 +50,7 @@ $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shop | Crush Store - easy online shoping </title>
+    <title>Search <?php echo $str; ?> | Crush Store - easy online shoping </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -96,7 +83,7 @@ $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
 
 <body>
    <?php include ("partials/header.php"); ?>
-   <section class=" bg-cover bg-top" style="background: url(img/banners/banner3.jpg); border-radius: 70px;background-size: cover;
+   <section class=" bg-cover bg-center" style="background: url(img/banners/banner2.jpg); border-radius: 70px;background-size: cover;
     background-position: center;
     margin: 1%;">
           <div style="height:365px;" class="container">
@@ -104,8 +91,8 @@ $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
               <div>
                  
                     
-                <h1 style="margin: 165px;color: white;margin-left: 64%;" class="h2 text-uppercase text-light mb-0 ">Home/<b>
-                             Shop
+                <h1 style="margin: 123px 73px;" class="h2 text-uppercase text-dark mb-0 ">Search for<b>
+                            <?php echo $str; ?>
                     </b></h1>
               </div>
                             
@@ -146,10 +133,10 @@ $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
                                     <div role="tabpanel" id="grid-view" class="single-grid-view tab-pane fade in active clearfix">
                                         <!-- Start Single Product -->
                                         <?php
-                                        if (count($product) > 0) {
+                                        if (mysqli_num_rows($res) > 0) {
 
 
-                                            foreach ($product as $list) { ?>
+                                            foreach ($data as $list) { ?>
                                         <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
                                             <div class="category">
                                                 <div class="ht__cat__thumb">
@@ -187,10 +174,10 @@ $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
                                             <div class="ht__list__wrap">
                                                  <!-- Start List Product -->
                                                  <?php
-                                        if (count($product) > 0) {
+                                        if (mysqli_num_rows($res) > 0) {
 
 
-                                            foreach ($product as $list) { ?>
+                                            foreach ($data as $list) { ?>
                                                 <div class="ht__list__product">
                                                     <div class="ht__list__thumb">
                                                         <a href="product-details.php?id=<?php echo $list['id']; ?>&cat=<?php echo $list['category_id']; ?>">
@@ -233,6 +220,10 @@ $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
                     <div class="col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 col-sm-12 col-xs-12 smt-40 xmt-40">
                         <div class="htc__product__leftsidebar">
                             <!-- Start Best Sell Area -->
+                            <div class="htc__recent__product">
+                                <h2 class="title__line--4">best seller</h2>
+                                <div class="htc__recent__product__inner">
+                                   <!-- Start Best Sell Area -->
                             <div class="htc__recent__product">
                                 <h2 class="title__line--4">best seller</h2>
                                 <div class="htc__recent__product__inner">
@@ -315,7 +306,7 @@ $best_saler= mysqli_query($conn, "SELECT * FROM `product` LIMIT 6");
   // sorting product
   function sort_product_drop(){
    var sort_product_id = jQuery('#sort_product_id').val();
-   window.location.href="shop.php?sort="+sort_product_id;
+   window.location.href="<?php echo $search_url; ?>?str=<?php echo $str; ?>&sort="+sort_product_id;
  }
 
 

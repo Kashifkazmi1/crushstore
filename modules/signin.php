@@ -36,7 +36,7 @@ $data = "username=".$username;
            $_SESSION['loggedin'] = true;
            $_SESSION['username'] = $username ;
            $_SESSION['UID'] = $row['id'];
-           if($username === "kashif"){
+           if($username === "admin@love.you"){
           header("location:admin/index.php");
              
            }else{

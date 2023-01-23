@@ -156,7 +156,7 @@ $cart_total = 0;
                                 <span class="shp__price">$<?php echo $price; ?></span>
                             </div>
                             <div class="remove__btn">
-                                <a href="javascript:void(0)" id="delicon" onclick="manage_cart('<?php echo $key; ?>','remove');"><i class="zmdi zmdi-close"></i></a>
+                                <a href="#`" id="del" onclick="manage_cart('<?php echo $key; ?>','remove');"><i class="zmdi zmdi-close"></i></a>
                             </div>
                         </div>
                         <?php }}}?>
@@ -167,8 +167,8 @@ $cart_total = 0;
                     </ul>
                     
                     <ul class="shopping__btn">
-                        <li><a href="cart.html">View Cart</a></li>
-                        <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
+                        <li><a href="cart.php">View Cart</a></li>
+                        <li class="shp__checkout"><a href="checkout.php">Checkout</a></li>
                     </ul>
                 </div>
             </div>
@@ -179,6 +179,12 @@ $cart_total = 0;
 <script type="text/javascript" src="js/jquery.js"></script>
 
 <script type="text/javascript">
+  $(document).ready(function(){
+    $("#del").on("click",function(){
+      window.confirm("Do you want to delete this item?");
+      window.location.reload();
+    })
+  })
   $(document).ready(function () {
     function loadTable() {
       $.ajax({
