@@ -22,12 +22,12 @@ include 'modules/signin.php';
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Asbab - eCommerce HTML5 Templatee</title>
+    <title>Crush Store - Easy Online shopping</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/bebo-logo.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
 
@@ -65,7 +65,7 @@ include 'modules/signin.php';
                 
                
                 <div class="single__slide animation__style01 slider__fixed--height"
-                style="background: url(img/banners/winter2.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                style="background: url(img/banners/winter2.jpg) right;width: 104%;height: 60%;background-size: cover;"
                 >
                     <div class="container">
                         <div class="row align-items__center">
@@ -88,7 +88,7 @@ include 'modules/signin.php';
                 </div>
                
                 <div class="single__slide animation__style01 slider__fixed--height"
-                style="background: url(img/banners/banner2.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                style="background: url(img/banners/banner2.jpg) right;width: 104%;height: 60%;background-size: cover;"
                 >
                     <div class="container">
                         <div class="row align-items__center">
@@ -110,7 +110,7 @@ include 'modules/signin.php';
                     </div>
                 </div>
                 <div  class="single__slide animation__style01 slider__fixed--height"
-                style="background: url(img/banners/banner1.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                style="background: url(img/banners/banner1.jpg) right;width: 104%;height: 60%;background-size: cover;"
                 >
                     <div class="container">
                         <div class="row align-items__center">
@@ -135,7 +135,7 @@ include 'modules/signin.php';
                 </div>
                
                 <div class="single__slide animation__style01 slider__fixed--height"
-                style="background: url(img/banners/banner5.jpg) right;width: 104%;height: 50%;background-size: cover;"
+                style="background: url(img/banners/banner5.jpg) right;width: 104%;height: 60%;background-size: cover;"
                 >
                     <div class="container">
                         <div class="row align-items__center">

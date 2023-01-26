@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['loggedin'] != true && $_SESSION['username'] != "kashif"){
-	header('location:/cashzone/index.php');
+	header('location:/crushstore/index.php');
 }
 ?>
 
@@ -81,7 +81,7 @@ if(isset($_POST['submit'])){
 					   <div class="card-content table-responsive">
 					      <!-- form  -->
 
-                          <form action="/cashzone/admin/add_product.php" method="POST" enctype="multipart/form-data">
+                          <form action="/crushstore/admin/add_product.php" method="POST" enctype="multipart/form-data">
                           <div class="container">
                           <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label ">Categories</label>

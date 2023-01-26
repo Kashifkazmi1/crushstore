@@ -15,7 +15,7 @@
 					   <div class="col-md-6">
 					       <p class="copyright d-flex justify-content-end">
 						      @2022 By -
-						      <a href="#">Cashzone</a> | Way to Easy Shopping
+						      <a href="#">crushstore</a> | Way to Easy Shopping
 						   </p>
 					   </div>
 				   </div>

@@ -88,7 +88,7 @@ include 'partials/config.inc.php';
 
             if(confirm("Are you sure to delete this category")){
                 console.log("yes");
-                window.location = `/cashzone/admin/users.php?delete=${id}`;
+                window.location = `/crushstore/admin/users.php?delete=${id}`;
             }else{
                 console.log("no");
             }

@@ -56,7 +56,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST" ){
 if ($res) {
   
   ?>
-  <script> window.location.href='thankyou.php?id=<?php echo $name; ?>';</script>
+  <script> window.location.href='index.php';</script>
   
   <?php
     exit;
@@ -74,7 +74,7 @@ if ($res) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/bebo-logo.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     
 

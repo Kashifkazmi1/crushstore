@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['loggedin'] != true && $_SESSION['username'] != "kashif"){
-	header('location:/cashzone/index.php');
+	header('location:/crushstore/index.php');
 }
 ?>
 

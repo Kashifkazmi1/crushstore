@@ -2,7 +2,7 @@
 <?php
 session_start();
 if($_SESSION['loggedin'] != true && $_SESSION['username'] != "kashif"){
-	header('location:/cashzone/index.php');
+	header('location:/crushstore.php/index.php');
 }
 ?>
 <?php include('partials/config.inc.php');
@@ -66,7 +66,7 @@ if(isset($_POST['submit'])){
 					   <div class="card-content table-responsive">
 					      <!-- form  -->
 
-                          <form action="/cashzone/admin/add_category.php" method="POST">
+                          <form action="/crushstore/admin/add_category.php" method="POST">
                           <div class="container">
                           <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label ">Categories</label>

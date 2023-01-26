@@ -1,7 +1,7 @@
 <?php
 session_start();
 if($_SESSION['loggedin'] != true && $_SESSION['username'] != "kashif"){
-	header('location:/cashzone/index.php');
+	header('location:/crushstore/index.php');
 }
 ?>
 <?php include('partials/config.inc.php');
@@ -102,7 +102,7 @@ if(isset($_GET['delete'])){
 
             if(confirm("Are you sure to delete this category")){
                 console.log("yes");
-                window.location = `/cashzone/admin/users.php?delete=${id}`;
+                window.location = `/crushstore/admin/users.php?delete=${id}`;
             }else{
                 console.log("no");
             }

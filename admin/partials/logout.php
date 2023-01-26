@@ -3,7 +3,7 @@ session_start();
 session_unset();
 session_destroy();
 
-header("location:/cashzone/index.php");
+header("location:/crushstore/index.php");
 exit;
 
 

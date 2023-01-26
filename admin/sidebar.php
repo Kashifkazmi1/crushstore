@@ -1,6 +1,6 @@
 <nav id="sidebar">
             <div class="sidebar-header">
-                <h3><a href="../index.php"><img src="img/logo.png" class="img-fluid"/><span>Cashzone</span></h3></a>
+                <h3><a href="../index.php"><img src="img/logo.png" class="img-fluid"/><span>crushstore</span></h3></a>
             </div>
             <ul class="list-unstyled components">
 			<li  class="active">
